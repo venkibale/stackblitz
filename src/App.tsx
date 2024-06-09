@@ -1,10 +1,20 @@
-import StarRating from "./StarRating";
-import styles from "./StarRating.module.css";
+import DropdownItems from './DropdownItems';
+import { dropdownData } from './data/data';
+import styles from './style.module.css';
 
-export default function App() {
+const App = () => {
   return (
-    <div className={styles.App}>
-      <StarRating value={0} total={5} />
+    <div className={styles.main}>
+      <div className={styles.nestedDropdown}>
+        <ul className={styles.dropdownMain}>
+          
+          {dropdownData.map((menu, index) => (
+            <DropdownItems items={menu} key={index} depthLevel={0} />
+          ))}
+        </ul>
+      </div>
     </div>
   );
-}
+};
+
+export default App;
