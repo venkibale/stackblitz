@@ -1,10 +1,6 @@
-import StarRating from "./StarRating";
-import styles from "./StarRating.module.css";
+import React from "react";
+import Game from "./component/Game";
 
-export default function App() {
-  return (
-    <div className={styles.App}>
-      <StarRating value={0} total={5} />
-    </div>
-  );
-}
+const App = () => <Game />;
+
+export default App;
