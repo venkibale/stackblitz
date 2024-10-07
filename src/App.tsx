@@ -1,4 +1,4 @@
-import Shape from "/Shape.js"
+import Shape from './Shape';
 
 // Use this data to create the shape
 const BOX_DATA = [
